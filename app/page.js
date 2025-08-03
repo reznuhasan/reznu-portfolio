@@ -5,14 +5,14 @@ import { Input } from '@/components/ui/input.jsx'
 import { Textarea } from '@/components/ui/textarea.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
 import { Progress } from '@/components/ui/progress.jsx'
-import { 
-  Twitter, 
-  Instagram, 
-  Linkedin, 
-  Github, 
-  Youtube, 
-  Mail, 
-  Phone, 
+import {
+  Twitter,
+  Instagram,
+  Linkedin,
+  Github,
+  Youtube,
+  Mail,
+  Phone,
   MapPin,
   Star,
   ChevronLeft,
@@ -21,7 +21,6 @@ import {
 import React from "react"
 // import heroPortrait from './assets/hero-portrait.png'
 // Fixed image paths
-import heroPortrait from "./assets/hero-portrait.png"
 import aboutPortrait from './assets/about-portrait.png'
 import scraperIcon from './assets/scraper-icon.png'
 import adblockerIcon from './assets/adblocker-icon.png'
@@ -30,13 +29,14 @@ import finlywealthIcon from './assets/finlywealth-icon.png'
 import dastyarIcon from './assets/dastyar-icon.png'
 import testimonialProfile from './assets/testimonial-profile.png'
 import Image from 'next/image'
+import Header from './Sections/Header'
+import HeroPart from './Sections/HeroPart'
 
 function App() {
   const [currentTestimonial, setCurrentTestimonial] = React.useState(0)
-
   const skills = [
-    'PHP', 'Laravel', 'MySQL', 'Vue.js', 'PostgreSQL', 
-    'HTML / CSS', 'Javascript', 'Tailwind CSS', 'Elastic Search', 
+    'PHP', 'Laravel', 'MySQL', 'Vue.js', 'PostgreSQL',
+    'HTML / CSS', 'Javascript', 'Tailwind CSS', 'Elastic Search',
     'Git', 'Livewire', 'Symfony', 'Redis', 'Chrome Extensions', 'Linux'
   ]
 
@@ -105,72 +105,10 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-orange-50">
       {/* Navigation */}
-      <nav className="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-yellow-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="text-2xl font-bold text-gray-900">
-              RezaGHZ<span className="text-yellow-500">.</span>
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#home" className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-medium">Home</a>
-              <a href="#about" className="text-gray-700 hover:text-yellow-600 font-medium">About Me</a>
-              <a href="#projects" className="text-gray-700 hover:text-yellow-600 font-medium">Project</a>
-              <a href="#portfolio" className="text-gray-700 hover:text-yellow-600 font-medium">Portfolio</a>
-              <a href="#blog" className="text-gray-700 hover:text-yellow-600 font-medium">Blog</a>
-              <a href="#contact" className="text-gray-700 hover:text-yellow-600 font-medium">Contact</a>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="text-sm">🇮🇷</span>
-              <span className="text-sm font-medium">Persian</span>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Header/>
 
       {/* Hero Section */}
-      <section id="home" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <Image 
-                src={heroPortrait}
-                alt="Reza Ghasemzadeh" 
-                width={300}
-                height={300}
-                className="w-full max-w-md mx-auto rounded-3xl shadow-2xl"
-              />
-            </div>
-            <div className="order-1 lg:order-2 space-y-8">
-              <div>
-                <p className="text-yellow-600 text-lg font-medium mb-2">Hi There, I'm</p>
-                <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-                  Reza<br />
-                  Ghasemzadeh
-                </h1>
-              </div>
-              
-              <div className="flex flex-wrap gap-3">
-                {[Twitter, Instagram, Linkedin, Github, Youtube, Mail].map((Icon, index) => (
-                  <div key={index} className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors cursor-pointer">
-                    <Icon className="w-5 h-5 text-gray-900" />
-                  </div>
-                ))}
-              </div>
-
-              <div className="grid grid-cols-2 gap-6">
-                <div className="border-2 border-yellow-300 rounded-2xl p-6 bg-white/50">
-                  <div className="text-4xl font-bold text-yellow-600 mb-2">53</div>
-                  <div className="text-gray-700 font-medium">Completed projects</div>
-                </div>
-                <div className="border-2 border-yellow-300 rounded-2xl p-6 bg-white/50">
-                  <div className="text-4xl font-bold text-yellow-600 mb-2">6</div>
-                  <div className="text-gray-700 font-medium">Positive review's</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroPart/>
 
       {/* About Section */}
       <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
@@ -185,9 +123,9 @@ function App() {
               </p>
             </div>
             <div className="flex justify-center">
-              <Image 
+              <Image
                 src={aboutPortrait}
-                alt="Reza pointing" 
+                alt="Reza pointing"
                 width={300}
                 height={300}
                 className="w-full max-w-md rounded-3xl shadow-2xl"
@@ -214,7 +152,7 @@ function App() {
                 ))}
               </div>
             </div>
-            
+
             <div>
               <h3 className="text-3xl font-bold text-gray-900 mb-6">Language skill</h3>
               <p className="text-gray-600 mb-8">
@@ -250,7 +188,7 @@ function App() {
               One of the most beautiful parts of every person's life, the part of their work life, I am very happy to have spent this part of my life with the people I loved and it has made my interest in my work more and more.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             {experiences.map((exp, index) => (
               <Card key={index} className="border-2 border-gray-200 hover:border-yellow-300 transition-colors">
@@ -285,7 +223,7 @@ function App() {
               Creating is always attractive and I tried to never deprive myself of this pleasure, here you can see the projects published by me.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <Card key={index} className="border-2 border-gray-200 hover:border-yellow-300 transition-all hover:shadow-lg">
@@ -316,9 +254,9 @@ function App() {
               Projects where you can get the most experience of working life, I like my projects very much, because I spent many days developing and designing it and I am happy to implement all of them.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {Array.from({length: 12}).map((_, index) => (
+            {Array.from({ length: 12 }).map((_, index) => (
               <Card key={index} className="aspect-square border-4 border-yellow-300 hover:border-yellow-500 transition-colors cursor-pointer">
                 <CardContent className="p-4 h-full flex flex-col justify-between">
                   <div className="flex-1 flex items-center justify-center">
@@ -349,13 +287,13 @@ function App() {
               Here you can know my colleague's comments about me, thank you for all the love. 😍
             </p>
           </div>
-          
+
           <div className="max-w-4xl mx-auto">
             <Card className="border-2 border-yellow-300 bg-white/80">
               <CardContent className="p-8">
                 <div className="flex flex-col md:flex-row items-center gap-8">
-                  <Image 
-                    src={testimonials[currentTestimonial].image} 
+                  <Image
+                    src={testimonials[currentTestimonial].image}
                     alt={testimonials[currentTestimonial].name}
                     className="w-24 h-24 rounded-full object-cover"
                   />
@@ -364,7 +302,7 @@ function App() {
                       "{testimonials[currentTestimonial].text}"
                     </p>
                     <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-                      {Array.from({length: testimonials[currentTestimonial].rating}).map((_, i) => (
+                      {Array.from({ length: testimonials[currentTestimonial].rating }).map((_, i) => (
                         <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                       ))}
                       <span className="ml-2 font-medium">{testimonials[currentTestimonial].rating}</span>
@@ -374,32 +312,31 @@ function App() {
                 </div>
               </CardContent>
             </Card>
-            
+
             <div className="flex justify-center items-center mt-8 space-x-4">
-              <Button 
-                variant="outline" 
-                size="icon" 
+              <Button
+                variant="outline"
+                size="icon"
                 onClick={prevTestimonial}
                 className="rounded-full border-yellow-300 hover:bg-yellow-100"
               >
                 <ChevronLeft className="w-4 h-4" />
               </Button>
-              
+
               <div className="flex space-x-2">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
-                    className={`w-3 h-3 rounded-full transition-colors ${
-                      index === currentTestimonial ? 'bg-yellow-400' : 'bg-gray-300'
-                    }`}
+                    className={`w-3 h-3 rounded-full transition-colors ${index === currentTestimonial ? 'bg-yellow-400' : 'bg-gray-300'
+                      }`}
                     onClick={() => setCurrentTestimonial(index)}
                   />
                 ))}
               </div>
-              
-              <Button 
-                variant="outline" 
-                size="icon" 
+
+              <Button
+                variant="outline"
+                size="icon"
                 onClick={nextTestimonial}
                 className="rounded-full border-yellow-300 hover:bg-yellow-100"
               >
@@ -432,7 +369,7 @@ function App() {
               I'm waiting to hear your voice or see your message.
             </p>
           </div>
-          
+
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-8">Whats up?</h3>
@@ -462,14 +399,14 @@ function App() {
                 </Button>
               </form>
             </div>
-            
+
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">What is your plan ?</h3>
               <h4 className="text-xl font-semibold text-gray-900 mb-8">Call me</h4>
               <p className="text-gray-600 mb-8">
                 You can get my contact information here and if you like, you can see the urls of my pages on social networks from the top of the page and find me there.
               </p>
-              
+
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
