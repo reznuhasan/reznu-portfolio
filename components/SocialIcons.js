@@ -1,7 +1,7 @@
 import { iconMap, socialPart } from '@/lib/helper';
 import React from 'react'
 
-const SocialIcons = () => {
+const SocialIcons = ({content=""}) => {
     return (
         <div>
             {/* Social Icons */}
@@ -15,9 +15,9 @@ const SocialIcons = () => {
                             href={link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
+                            className={` ${content==='footer'?'bg-gray-700 w-10 h-10 hover:bg-gray-400':"bg-yellow-400 w-12 h-12 hover:bg-yellow-500"} rounded-full flex items-center justify-center  transition-colors`}
                         >
-                            <IconComponent className="w-5 h-5 text-gray-900" />
+                            <IconComponent className={`w-5 h-5 ${content==='footer'?"text-gray-300":"text-gray-900"}`} />
                         </a>
                     );
                 })}

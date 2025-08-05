@@ -31,6 +31,7 @@ import Header from './Sections/Header'
 import HeroPart from './Sections/HeroPart'
 import About from './Sections/About'
 import Skills from './Sections/Skills'
+import Footer from './Sections/Footer'
 
 function App() {
   const [currentTestimonial, setCurrentTestimonial] = React.useState(0)
@@ -366,20 +367,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex justify-center space-x-6 mb-8">
-            {[Twitter, Github, Instagram, Linkedin, Youtube, Mail].map((Icon, index) => (
-              <div key={index} className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-gray-900 transition-colors cursor-pointer">
-                <Icon className="w-5 h-5" />
-              </div>
-            ))}
-          </div>
-          <div className="text-center text-gray-400">
-            <p>Made with ❤️ and lots of 🫶 from 2015 - 2025 ©</p>
-          </div>
-        </div>
-      </footer>
+      <Footer/>
     </div>
   )
 }
