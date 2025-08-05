@@ -25,16 +25,15 @@ import adblockerIcon from './assets/adblocker-icon.png'
 import loutosIcon from './assets/loutos-icon.png'
 import finlywealthIcon from './assets/finlywealth-icon.png'
 import dastyarIcon from './assets/dastyar-icon.png'
-import testimonialProfile from './assets/testimonial-profile.png'
 import Image from 'next/image'
 import Header from './Sections/Header'
 import HeroPart from './Sections/HeroPart'
 import About from './Sections/About'
 import Skills from './Sections/Skills'
 import Footer from './Sections/Footer'
+import Testimonials from './Sections/Testimonials'
 
 function App() {
-  const [currentTestimonial, setCurrentTestimonial] = React.useState(0)
 
 
   const experiences = [
@@ -82,23 +81,7 @@ function App() {
     }
   ]
 
-  const testimonials = [
-    {
-      name: 'Armin Golpoor',
-      rating: 5,
-      text: 'Reza is a responsible person and his world is big. We have been working together for several years, apart from the subject of programming in business, he also has an active mind and likes to be an influential person for the people around him. The paths you choose are right and your destination is so good that you do not even think about it.',
-      image: testimonialProfile
-    }
-  ]
-
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
-  }
-
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-orange-50">
       {/* Navigation */}
@@ -213,73 +196,7 @@ function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-yellow-50 to-orange-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">What People Say About Me?</h2>
-            <p className="text-gray-600 text-lg">
-              Here you can know my colleague's comments about me, thank you for all the love. 😍
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <Card className="border-2 border-yellow-300 bg-white/80">
-              <CardContent className="p-8">
-                <div className="flex flex-col md:flex-row items-center gap-8">
-                  <Image
-                    src={testimonials[currentTestimonial].image}
-                    alt={testimonials[currentTestimonial].name}
-                    className="w-24 h-24 rounded-full object-cover"
-                  />
-                  <div className="flex-1 text-center md:text-left">
-                    <p className="text-gray-600 text-lg mb-4 italic">
-                      "{testimonials[currentTestimonial].text}"
-                    </p>
-                    <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-                      {Array.from({ length: testimonials[currentTestimonial].rating }).map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
-                      <span className="ml-2 font-medium">{testimonials[currentTestimonial].rating}</span>
-                    </div>
-                    <p className="font-semibold text-gray-900">{testimonials[currentTestimonial].name}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <div className="flex justify-center items-center mt-8 space-x-4">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={prevTestimonial}
-                className="rounded-full border-yellow-300 hover:bg-yellow-100"
-              >
-                <ChevronLeft className="w-4 h-4" />
-              </Button>
-
-              <div className="flex space-x-2">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    className={`w-3 h-3 rounded-full transition-colors ${index === currentTestimonial ? 'bg-yellow-400' : 'bg-gray-300'
-                      }`}
-                    onClick={() => setCurrentTestimonial(index)}
-                  />
-                ))}
-              </div>
-
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={nextTestimonial}
-                className="rounded-full border-yellow-300 hover:bg-yellow-100"
-              >
-                <ChevronRight className="w-4 h-4" />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+     <Testimonials/>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-yellow-400">
