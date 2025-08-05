@@ -3,22 +3,14 @@ import { Button } from '@/components/ui/button.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { Input } from '@/components/ui/input.jsx'
 import { Textarea } from '@/components/ui/textarea.jsx'
-import { Badge } from '@/components/ui/badge.jsx'
 import {
-  Twitter,
-  Instagram,
-  Linkedin,
-  Github,
-  Youtube,
+
   Mail,
   Phone,
   MapPin,
-  Star,
-  ChevronLeft,
-  ChevronRight
+
 } from 'lucide-react'
 import React from "react"
-// import heroPortrait from './assets/hero-portrait.png'
 // Fixed image paths
 import scraperIcon from './assets/scraper-icon.png'
 import adblockerIcon from './assets/adblocker-icon.png'
@@ -32,6 +24,7 @@ import Skills from './Sections/Skills'
 import Footer from './Sections/Footer'
 import Testimonials from './Sections/Testimonials'
 import Experiences from './Sections/Experiences'
+import Contact from './Sections/Contact'
 
 function App() {
 
@@ -154,77 +147,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Get In Touch</h2>
-            <p className="text-gray-600 text-lg">
-              Here you can let me know if you have any criticism, suggestion or problem,<br />
-              I'm waiting to hear your voice or see your message.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-8">Whats up?</h3>
-              <form className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Name (required)</label>
-                  <Input placeholder="Full name" className="border-gray-300" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email (required)</label>
-                  <Input type="email" placeholder="Email address" className="border-gray-300" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Subject (required)</label>
-                  <Input placeholder="Subject" className="border-gray-300" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Comment (required)</label>
-                  <Textarea placeholder="Type comment" rows={4} className="border-gray-300" />
-                </div>
-                <div className="flex items-center space-x-2">
-                  <input type="checkbox" id="robot" className="rounded" />
-                  <label htmlFor="robot" className="text-sm text-gray-700">I'm not a robot</label>
-                </div>
-                <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-3">
-                  Contact Me
-                </Button>
-              </form>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">What is your plan ?</h3>
-              <h4 className="text-xl font-semibold text-gray-900 mb-8">Call me</h4>
-              <p className="text-gray-600 mb-8">
-                You can get my contact information here and if you like, you can see the urls of my pages on social networks from the top of the page and find me there.
-              </p>
-
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
-                    <MapPin className="w-5 h-5 text-gray-900" />
-                  </div>
-                  <span className="text-gray-900 font-medium">Iran , Mazandaran , Amol</span>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-gray-900" />
-                  </div>
-                  <span className="text-gray-900 font-medium">rezaghasemzadeh1@gmail.com</span>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
-                    <Phone className="w-5 h-5 text-gray-900" />
-                  </div>
-                  <span className="text-gray-900 font-medium">09391216509</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Contact/>
 
       {/* Footer */}
       <Footer/>
