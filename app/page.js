@@ -23,8 +23,7 @@ import React from "react"
 import scraperIcon from './assets/scraper-icon.png'
 import adblockerIcon from './assets/adblocker-icon.png'
 import loutosIcon from './assets/loutos-icon.png'
-import finlywealthIcon from './assets/finlywealth-icon.png'
-import dastyarIcon from './assets/dastyar-icon.png'
+
 import Image from 'next/image'
 import Header from './Sections/Header'
 import HeroPart from './Sections/HeroPart'
@@ -32,36 +31,12 @@ import About from './Sections/About'
 import Skills from './Sections/Skills'
 import Footer from './Sections/Footer'
 import Testimonials from './Sections/Testimonials'
+import Experiences from './Sections/Experiences'
 
 function App() {
 
 
-  const experiences = [
-    {
-      icon: finlywealthIcon,
-      title: 'Full Stack Developer - FinlyWealth',
-      type: '(Full Time)',
-      period: '2024 - Now',
-      description: [
-        'Chrome extension development focused on user-friendly features.',
-        'Developed front-end and back-end for finance and purchasing projects.',
-        'Improved workflows for better efficiency and data security.',
-        'Analyzed performance and resolved issues for system.'
-      ]
-    },
-    {
-      icon: dastyarIcon,
-      title: 'Full Stack Developer - Dastyar',
-      type: '(Full-Time)',
-      period: '2023 - 2024',
-      description: [
-        'Extension development for different browsers with 200,000 users as the most downloaded extension in the Iranian market',
-        'Designing and developing server-side programs to communicate with extensions',
-        'Scaling the project to support the presence of millions of users',
-        'Troubleshooting application and code issues'
-      ]
-    }
-  ]
+  
 
   const projects = [
     {
@@ -97,39 +72,7 @@ function App() {
       <Skills/>
 
       {/* Experience Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">My Experiences</h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              One of the most beautiful parts of every person's life, the part of their work life, I am very happy to have spent this part of my life with the people I loved and it has made my interest in my work more and more.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {experiences.map((exp, index) => (
-              <Card key={index} className="border-2 border-gray-200 hover:border-yellow-300 transition-colors">
-                <CardHeader className="flex flex-row items-center space-y-0 pb-4">
-                  <Image src={exp.icon} alt={exp.title} width={300} height={300} className="w-16 h-16 rounded-full mr-4" />
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Badge className="bg-yellow-400 text-gray-900">{exp.period}</Badge>
-                    </div>
-                    <CardTitle className="text-lg">{exp.title} <span className="text-yellow-600">{exp.type}</span></CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {exp.description.map((item, idx) => (
-                      <li key={idx} className="text-gray-600 text-sm">- {item}</li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Experiences/>
 
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-yellow-50 to-orange-50">
