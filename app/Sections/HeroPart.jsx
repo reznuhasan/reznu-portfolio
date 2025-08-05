@@ -40,16 +40,6 @@ const HeroPart = () => {
 
                         <SocialIcons />
 
-                        {/* <div className="grid grid-cols-2 gap-6">
-                            <div className="border-2 border-yellow-300 rounded-2xl p-6 bg-white/50">
-                                <div className="text-4xl font-bold text-yellow-600 mb-2">53</div>
-                                <div className="text-gray-700 font-medium">Completed projects</div>
-                            </div>
-                            <div className="border-2 border-yellow-300 rounded-2xl p-6 bg-white/50">
-                                <div className="text-4xl font-bold text-yellow-600 mb-2">6</div>
-                                <div className="text-gray-700 font-medium">Positive review's</div>
-                            </div>
-                        </div> */}
                     </div>
                 </div>
             </div>
