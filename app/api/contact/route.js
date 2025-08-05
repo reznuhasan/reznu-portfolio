@@ -3,7 +3,6 @@ import nodemailer from "nodemailer";
 
 export async function POST(req) {
   const { user_name, user_email, subject, message } = await req.json();
-  console.log(process.env.EMAIL_PASS)
   // Setup transport
   const transporter = nodemailer.createTransport({
     service: "gmail", // or "hotmail", "yahoo", etc.
