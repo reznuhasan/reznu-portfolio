@@ -1,15 +1,7 @@
 "use client"
 import { Button } from '@/components/ui/button.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
-import { Input } from '@/components/ui/input.jsx'
-import { Textarea } from '@/components/ui/textarea.jsx'
-import {
 
-  Mail,
-  Phone,
-  MapPin,
-
-} from 'lucide-react'
 import React from "react"
 // Fixed image paths
 import scraperIcon from './assets/scraper-icon.png'
@@ -25,6 +17,7 @@ import Footer from './Sections/Footer'
 import Testimonials from './Sections/Testimonials'
 import Experiences from './Sections/Experiences'
 import Contact from './Sections/Contact'
+import HireMe from './Sections/HireMe'
 
 function App() {
 
@@ -63,7 +56,6 @@ function App() {
       <About/>
       {/* Skills Section */}
       <Skills/>
-
       {/* Experience Section */}
       <Experiences/>
 
@@ -99,7 +91,7 @@ function App() {
       </section>
 
       {/* Portfolio Grid Section */}
-      <section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      {/* <section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">I Love What I Do</h2>
@@ -129,22 +121,14 @@ function App() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+      <HireMe/>
 
       {/* Testimonials Section */}
      <Testimonials/>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-yellow-400">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
-            I Am Available For Remote Jobs !
-          </h2>
-          <Button className="bg-white text-gray-900 hover:bg-gray-100 font-medium px-8 py-3 text-lg">
-            Hire Me Now
-          </Button>
-        </div>
-      </section>
+     
 
       {/* Contact Section */}
       <Contact/>
