@@ -18,6 +18,7 @@ import Testimonials from './Sections/Testimonials'
 import Experiences from './Sections/Experiences'
 import Contact from './Sections/Contact'
 import HireMe from './Sections/HireMe'
+import ProjectsSection from './Sections/Projects'
 
 function App() {
 
@@ -60,36 +61,8 @@ function App() {
       <Experiences/>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-yellow-50 to-orange-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">What have I created?</h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Creating is always attractive and I tried to never deprive myself of this pleasure, here you can see the projects published by me.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <Card key={index} className="border-2 border-gray-200 hover:border-yellow-300 transition-all hover:shadow-lg">
-                <CardHeader className="text-center">
-                  <Image src={project.icon} alt={project.title} width={300} height={300} className="w-20 h-20 mx-auto mb-4 rounded-full" />
-                  <CardTitle className="text-xl">{project.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <CardDescription className="text-gray-600 mb-6">
-                    {project.description}
-                  </CardDescription>
-                  <Button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium">
-                    Read More
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
+     <ProjectsSection/>
+       
       {/* Portfolio Grid Section */}
       {/* <section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">

@@ -4,7 +4,7 @@ import React from 'react'
 
 const Skills = () => {
       const skills = [
-    'React', 'Nextjs',"Redux","Shadcn", 'MySQL', 'Mongodb', 'PostgreSQL',
+    'React', 'Nextjs',"Redux","Shadcn", 'Mongodb',,
     'HTML / CSS', 'Javascript', 'Tailwind CSS', 'Bootstrap',
     'Nodejs', 'Expressjs', 'Chrome Extensions'
   ]
