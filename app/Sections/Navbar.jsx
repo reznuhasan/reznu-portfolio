@@ -14,8 +14,8 @@ const Navbar = () => {
         { label: 'Home', href: '#home' },
         { label: 'About Me', href: '#about' },
         { label: 'Project', href: '#projects' },
-        { label: 'Portfolio', href: '#portfolio' },
-        { label: 'Blog', href: '#blog' },
+        // { label: 'Portfolio', href: '#portfolio' },
+        // { label: 'Blog', href: '#blog' },
         { label: 'Contact', href: '#contact' },
       ].map((item) => (
         <a
