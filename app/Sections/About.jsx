@@ -1,5 +1,4 @@
 import React from 'react'
-import aboutPortrait from '../assets/about-portrait.png'
 import Image from 'next/image'
 
 const About = () => {
@@ -36,7 +35,7 @@ const About = () => {
 
                     <div className="flex justify-center">
                         <Image
-                            src={aboutPortrait}
+                            src='/assets/hero-portrait1.png'
                             alt="Reza pointing"
                             width={300}
                             height={300}

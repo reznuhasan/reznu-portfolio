@@ -1,5 +1,4 @@
 import React from 'react'
-import heroPortrait from "../assets/hero-portrait.png"
 import Typewriter from 'typewriter-effect';
 
 import SocialIcons from '@/components/SocialIcons'
@@ -11,7 +10,7 @@ const HeroPart = () => {
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div className="order-2 lg:order-1">
                         <Image
-                            src={heroPortrait}
+                            src='/assets/about-portrait.png'
                             alt="RiznuDev"
                             width={300}
                             height={300}
