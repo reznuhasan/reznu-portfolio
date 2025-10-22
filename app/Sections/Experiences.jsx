@@ -7,23 +7,11 @@ import Image from 'next/image'
 
 const Experiences = () => {
     const experiences = [
-        {
-            icon: Faceseek,
-            title: 'Full Stack Developer - Faceseek',
-            type: '(Full Time)',
-            period: '2024 - Now',
-            description: [
-                'Developing AI-driven features such as image-to-image, image-to-anime, and image-to-video generation.',
-                'Building advanced FaceSearch and ImageSearch tools to help users find images by face, name, or visual similarity.',
-                'Implementing real-time portrait enhancement and AI-powered transformations for high-quality outputs.',
-                'Optimizing system performance to handle large-scale image processing with speed and accuracy.'
-            ]
-        },
-        {
+         {
             icon: kodezenIcon,
             title: 'React Developer - Kodezen',
             type: '(Full-Time)',
-            period: '2024-2024',
+            period: 'February 2024-March 2025',
             description: [
                 'Developed and optimized high-performance React applications for large-scale user bases',
                 'Built and maintained cross-browser extensions, achieving 200,000+ active users',
@@ -31,7 +19,20 @@ const Experiences = () => {
                 'Enhanced scalability and reliability to support millions of potential users',
                 'Identified and resolved complex bugs to improve user experience and system stability'
             ]
+        },
+        {
+            icon: Faceseek,
+            title: 'Full Stack Developer - Faceseek',
+            type: '(Freelancer)',
+            period: 'April 2025 - September 2025',
+            description: [
+                'Developing AI-driven features such as image-to-image, image-to-anime, and image-to-video generation.',
+                'Building advanced FaceSearch and ImageSearch tools to help users find images by face, name, or visual similarity.',
+                'Implementing real-time portrait enhancement and AI-powered transformations for high-quality outputs.',
+                'Optimizing system performance to handle large-scale image processing with speed and accuracy.'
+            ]
         }
+       
     ]
     return (
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
