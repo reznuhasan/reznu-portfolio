@@ -10,7 +10,7 @@ const HeroPart = () => {
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div className="order-2 lg:order-1">
                         <Image
-                            src='/assets/about-portrait.png'
+                            src='/assets/hero-portrait.png'
                             alt="RiznuDev"
                             width={300}
                             height={300}

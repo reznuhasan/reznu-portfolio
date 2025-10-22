@@ -35,7 +35,7 @@ const About = () => {
 
                     <div className="flex justify-center">
                         <Image
-                            src='/assets/hero-portrait1.png'
+                            src='/assets/about-portrait1.png'
                             alt="Reza pointing"
                             width={300}
                             height={300}
