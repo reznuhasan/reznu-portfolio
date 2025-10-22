@@ -13,8 +13,13 @@ const About = () => {
                                 I love being a developer !
                             </h2>
                             <p className="text-gray-600 text-lg leading-relaxed">
-                                Hello, I am Riznu; The 21 -year-old is a full stack developer. I started programming in 2020 and continued to specialize in 2025. These days, along with programming, I study about startups and businesses,Machine Learning, and besides all this, I play the dulcimer and watch my favorite series. am working
-                            </p>
+
+                                I'm a 26-year-old Full Stack Developer passionate about building modern, scalable web applications. I started my programming journey in 2020 and have continued to grow and specialize through 2025.
+
+                                Alongside coding, I’m deeply interested in startups, business development, and machine learning — exploring how technology can drive innovation.
+
+                                When I’m not coding, you’ll probably find me playing the dulcimer or watching my favorite series to unwind and recharge.                          
+                                  </p>
                         </div>
 
                         <div className="grid grid-cols-2 gap-6">

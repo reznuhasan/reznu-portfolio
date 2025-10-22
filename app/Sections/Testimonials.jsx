@@ -56,7 +56,7 @@ const Testimonials = () => {
 
         <div className="max-w-4xl mx-auto">
           <Card className="border-2 border-yellow-300 bg-white/80">
-            <CardContent className="p-8 relative overflow-hidden h-[260px] sm:h-[220px]">
+            <CardContent className="p-8 relative overflow-hidden h-[280px] sm:h-[240px]">
               <div className="relative w-full h-full">
                 {testimonials.map((testimonial, index) => (
                   <div
